@@ -15,4 +15,4 @@ phases:
       - aws eks --region eu-west-1 update-kubeconfig --name test1
   build:
     commands:
-      - sed "s/{{CONTAINER_PORT}}/$CONTAINER_PORT/g" | kubectl apply -f deployment
+      - "sed -i \"s/{{CONTAINER_PORT}}/$CONTAINER_PORT/g\" file" | kubectl apply -f deployment
