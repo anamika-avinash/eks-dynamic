@@ -17,4 +17,5 @@ phases:
     commands:
       - codebuild-breakpoint
       - sed -i "s/{{CONTAINER_PORT}}/$CONTAINER_PORT/g" deployment/pod.yaml 
+      - sed -i "s/{{NAME}}/$NAME/g" deployment/pod.yaml 
       - kubectl apply -f deployment
