@@ -9,4 +9,4 @@ spec:
   - name: $CONTAINER_NAME
     image: $IMAGE 
     ports: 
-    - containerPort: {CONTAINER_PORT}
+    - containerPort: {{CONTAINER_PORT}}
