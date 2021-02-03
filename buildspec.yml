@@ -15,4 +15,6 @@ phases:
       - aws eks --region eu-west-1 update-kubeconfig --name test1
   build:
     commands:
-      - sed -i "s/{{CONTAINER_PORT}}/$CONTAINER_PORT/g" deployment/pod.yaml | kubectl apply -f deployment
+      - codebuild-breakpoint
+      - sed -i "s/{{CONTAINER_PORT}}/$CONTAINER_PORT/g" deployment/pod.yaml 
+      - kubectl apply -f deployment
