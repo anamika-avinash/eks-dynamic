@@ -3,10 +3,10 @@ kind: Pod
 metadata: 
   name: {{NAME}} 
   labels: 
-    $LABLE_KEY: $LABLE_VALUE
+    {{LABLE_KEY}} : {{LABLE_VALUE}}
 spec: 
   containers: 
-  - name: $CONTAINER_NAME
-    image: $IMAGE 
+  - name: {{CONTAINER_NAME}}
+    image: {{IMAGE}}
     ports: 
     - containerPort: {{CONTAINER_PORT}}
