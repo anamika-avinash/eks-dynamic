@@ -1,7 +1,7 @@
 apiVersion: v1 
 kind: Pod 
 metadata: 
-  name: $NAME 
+  name: {{NAME}} 
   labels: 
     $LABLE_KEY: $LABLE_VALUE
 spec: 
